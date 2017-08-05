@@ -20,6 +20,9 @@ setup(
         'tornado',
         'requests'
     ],
+    tests_require=[
+        'PyHamcrest'
+    ],
     classifiers = [
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
