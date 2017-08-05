@@ -7,7 +7,8 @@ from tornado import escape
 from tornado import testing
 from hamcrest import *
 
-from ikiteker import *
+from ikiteker.routes import *
+
 
 class HealthCheckHandlerTest(testing.AsyncHTTPTestCase):
     def test_should_return_healthcheck_endpoint_success_result(self):
@@ -22,4 +23,4 @@ class HealthCheckHandlerTest(testing.AsyncHTTPTestCase):
         assert_that(escape.json_decode(response.body), is_(dict(expectedJsonResponse)))
 
     def get_app(self):
-        return application
+        return web.Application(routes)

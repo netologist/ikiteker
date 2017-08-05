@@ -4,7 +4,6 @@ from datetime import date
 import tornado.escape
 import tornado.ioloop
 import tornado.web
-import ConfigParser
 
 class HealthCheckHandler(tornado.web.RequestHandler):
     def get(self):
@@ -12,3 +11,6 @@ class HealthCheckHandler(tornado.web.RequestHandler):
         response = { 'status': 'ok' }
         self.set_header('Content-Type', 'application/json')
         self.write(response)
+
+
+

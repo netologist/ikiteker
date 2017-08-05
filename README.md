@@ -4,6 +4,13 @@
 
 python setup.py install
 
+#### Configuration
+
+```
+export IKITEKER_PORT = 4000
+export IKITEKER_STRAVA_ACCESS_KEY = 1234
+```
+
 #### Tests
 
 python setup.py test 
