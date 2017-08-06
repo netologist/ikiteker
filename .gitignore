@@ -1,5 +1,7 @@
 *.py[co]
 *.egg-info/
+.env
 .eggs
+.idea
 build/
 dist/

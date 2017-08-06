@@ -1,5 +1,9 @@
 ### IkiTeker is Rest App (using strava api) for Istanbul Riders
 
+#### Demo
+
+https://ikiteker-alpha.herokuapp.com/riders
+
 #### Installation
 
 python setup.py install

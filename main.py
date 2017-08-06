@@ -1,8 +1,14 @@
 import os
-from tornado import web
+import logging
 from tornado import ioloop
 from tornado import httpserver
 from ikiteker.routes import *
+
+logging.basicConfig() # you need to initialize logging, otherwise you will not see anything from requests
+logging.getLogger().setLevel(logging.DEBUG)
+requests_log = logging.getLogger("requests.packages.urllib3")
+requests_log.setLevel(logging.DEBUG)
+requests_log.propagate = True
 
 def main():
     application = web.Application(routes)
